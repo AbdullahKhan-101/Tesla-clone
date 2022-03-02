@@ -9,7 +9,6 @@ import { useSelector } from "react-redux";
 const Header = () => {
   const [burgerStatus, setBurgerStatus] = useState(false);
   const cars = useSelector(selectCars);
-  console.log(cars);
   return (
     <Container>
       <a>
@@ -119,17 +118,6 @@ const Menu = styled.div`
 const RightMenu = styled.div`
   display: flex;
   align-items: center;
-  IconButton {
-    display: none;
-    &&& {
-      display: none;
-    }
-    @media (max-width: 1000px) {
-      &&& {
-        display: block;
-      }
-    }
-  }
   a {
     font-weight: 600;
     text-transform: uppercase;
@@ -138,14 +126,6 @@ const RightMenu = styled.div`
 `;
 const CustomMenu = styled(MenuIcon)`
   /* margin-left: -10px; */
-  &&& {
-    display: none;
-  }
-  @media (max-width: 1000px) {
-    &&& {
-      display: block;
-    }
-  }
 `;
 const BurgerMenu = styled.div`
   position: fixed;
